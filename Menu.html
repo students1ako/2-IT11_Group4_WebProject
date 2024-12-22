@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="icon" type="image/png" href="Media/OldCoastLogo.png">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="MenuStylesheet.css">
+</head>
+<!-- Navigation bar -->
+<nav>
+    <a href="HomePage.html" id="navLogo">
+        <img src="Media/OldCoastLogo.png" alt="Old Coast Logo">
+    </a>
+    <div class="nav-links">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="Home"></span>
+            <span class="Menu"></span>
+            <span class="Coffee Carts"></span>
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="HomePage.html"><b>Home</b></a>
+            <a href="Menu.html"><b>Menu</b></a>
+            <a href="Services.html"><b>Coffee Carts</b></a>
+            <a href="https://maps.app.goo.gl/iVLDW5noDbP72YoB6">
+                <img src="Media/LocationIcon.png" alt="Location Icon">
+                <b id="store">Find a Store</b>
+            </a>
+        </div>
+    </div>
+</nav>
+<body link="white" vlink="white" class="menupagebody">
+    
+
+    <div class="MenuContainer">
+        <div class="sidebar">
+            <div class="sidebarContainerText">
+                <h3>Drinks</h3>
+                <hr>
+                <ul><!--added href to call the section id and move the page to the selected section-->
+                    <li><a href="#coffee">Espresso</a></li>
+                    <li><a href="#non-coffee">Non-Coffee</a></li>
+                    <li><a href="#fruitSoda">Fruit Sodas</a></li>
+                </ul>
+                <br>
+                <h3>Food</h3>
+                <hr>
+                <ul>
+                    <li><a href="#pasta">Pasta</a></li>
+                    <li><a href="#pastries">Pastries</a></li>
+                    <li><a href="#sandwiches">Sandwiches</a></li>
+                    <li><a href="#snacks">Snacks</a></li>
+                </ul>
+            </div>    
+        </div>
+
+        
+        <div class="menuItemContainer">
+            <h1>Menu</h1>
+            <hr>
+            <!--divided menu items per category with section-->
+            <section id="coffee">
+                <h2>Espresso</h2>
+                <div class="item-box" onclick="selectItem(1)">
+                    <img src="Media/products/Americano.png" id="americano">
+                    Americano
+                </div>
+                <div class="item-box" onclick="selectItem(2)">
+                    <img src="Media/products/Caffe Latte.png" id="cafeLatte">
+                    Cafe Latte
+                </div>
+                <div class="item-box" onclick="selectItem(3)">
+                    <img src="Media/products/OldCoast Signature.png" id="oldCoastSig">
+                    OldCoast Signature
+                </div>
+                <div class="item-box" onclick="selectItem(4)">
+                    <img src="Media/products/Of the Sea.png" id="ofTheSea">
+                    Of The Sea
+                </div>
+                <div class="item-box" onclick="selectItem(5)">
+                    <img src="Media/products/Cafe Mocha.png" id="cafeMocha">
+                    Cafe Mocha
+                </div>
+                <div class="item-box" onclick="selectItem(6)">
+                    <img src="Media/products/Coffee Jelly.png" id="coffeeJelly">
+                    Coffee Jelly
+                </div>
+                <div class="item-box" onclick="selectItem(7)">
+                    <img src="Media/products/Biscoff Latte.png" id="biscoffLatte">
+                    Biscoff Latte
+                </div>
+                <div class="item-box" onclick="selectItem(8)">
+                    <img src="Media/products/French Vanilla.png" id="frenchVanilla">
+                    French Vanilla
+                </div>
+                <div class="item-box" onclick="selectItem(9)">
+                    <img src="Media/products/White mocha.png" id="whiteMocha">
+                    White Mocha
+                </div>
+                <div class="item-box" onclick="selectItem(10)">
+                    <img src="Media/products/Nutella Espresso.png" id="nutellaspresso">
+                    Nutellaspresso
+                </div>
+                <div class="item-box" onclick="selectItem(11)">
+                    <img src="Media/products/Vanila Latte.png" id="vanillaLatte">
+                    Vanilla Latte
+                </div>
+                <div class="item-box" onclick="selectItem(12)">
+                    <img src="Media/products/Hazelnut Macchiato.png" id="hazelnutMach">
+                    Hazelnut Macchiato
+                </div>
+                <div class="item-box" onclick="selectItem(13)">
+                    <img src="Media/products/Caramel Macchiato.png" id="caramelMach">
+                    Caramel Macchiato
+                </div>
+                <div class="item-box" onclick="selectItem(14)">
+                    <img src="Media/products/Dirty Matcha.png" id="dirtyMatcha">
+                    Dirty Matcha
+                </div>
+                <div class="item-box" onclick="selectItem(15)">
+                    <img src="Media/products/Spanish Latte.png" id="spanishLatte">
+                    Spanish Latte
+                </div>
+
+                <section id="non-coffee"> 
+                    <h2>Non-Coffee</h2>
+                    <div class="item-box" onclick="selectItem(16)">
+                        <img src="Media/products/Matcha.png" id="matcha">
+                        Matcha
+                    </div>
+                    <div class="item-box" onclick="selectItem(17)">
+                        <img src="Media/products/Biscoff Cream.png" id="biscoffCream">
+                        Biscoff Cream
+                    </div>
+                    <div class="item-box" onclick="selectItem(18)">
+                        <img src="Media/products/Strawberry Milk.png" id="strawberryMilk">
+                        Strawberry Milk
+                    </div>
+                    <div class="item-box" onclick="selectItem(19)">
+                        <img src="Media/products/Nutella Almond.png" id="nutellaAlmond">
+                        Nutella Almond
+                    </div>
+                    <div class="item-box" onclick="selectItem(20)">
+                        <img src="Media/products/Berry Matcha.png" id="berryMatcha">
+                        Berry Matcha
+                    </div>
+                    <div class="item-box" onclick="selectItem(21)">
+                        <img src="Media/products/Dark Choco.png" id="darkChoco">
+                        Dark Choco
+                    </div>
+                    <div class="item-box" onclick="selectItem(22)">
+                        <img src="Media/products/Black Peach Tea.png" id="blackPeach">
+                        Black Peach Tea
+                    </div>
+                </section>
+        
+                <section id="fruitSoda">
+                    <h2>Fruit Sodas</h2>
+                    <div class="item-box" onclick="selectItem(23)">
+                        <img src="Media/products/Green Apple.png" id="greenApple">
+                        Green Apple
+                    </div>
+                    <div class="item-box" onclick="selectItem(24)">
+                        <img src="Media/products/Blueberry.png" id="blueberry">
+                        Blueberry
+                    </div>
+                    <div class="item-box" onclick="selectItem(25)">
+                        <img src="Media/products/Strawberry.png" id="strawberry">
+                        Strawberry
+                    </div>
+                    <div class="item-box" onclick="selectItem(26)">
+                        <img src="Media/products/Lychee.png" id="lychee">
+                        Lychee
+                    </div>
+                    <div class="item-box" onclick="selectItem(27)">
+                        <img src="Media/products/Honey Peach.png" id="honeyPeach">
+                        Honey Peach
+                    </div>
+                    <div class="item-box" onclick="selectItem(28)">
+                        <img src="Media/products/Strawberry Cream.png" id="strawberryCream">
+                        Strawberry Cream
+                    </div>
+                </section>
+                
+                <br>
+                <h2>Food</h2>
+                <hr>
+                <section id="pasta">
+                    <h2>Pasta</h2>
+                    <div class="item-box" onclick="selectItem(29)">
+                        <img src="Media/products/Carbonara.png" id="carbonara">
+                        Carbonara
+                    </div>
+                </section>
+                <section id="pastries">
+                    <h2>Pastries</h2>
+                    <div class="item-box" onclick="selectItem(30)">
+                        <img src="Media/products/Banana Bread.png" id="bananaBread">
+                        Banana Bread
+                    </div>
+                    <div class="item-box" onclick="selectItem(31)">
+                        <img src="Media/products/Muffin.png" id="muffin">
+                        Muffin
+                    </div>
+                </section>
+                <section id="sandwiches">
+                    <h2>Sandwiches</h2>
+                    <div class="item-box" onclick="selectItem(32)">
+                        <img src="Media/products/Chicken Spread.png" id="chickenSpread">
+                        Chicken Spread
+                    </div>
+                    <div class="item-box" onclick="selectItem(33)">
+                        <img src="Media/products/Grilled Cheese.png" id="grilledCheese">
+                        Grilled Cheese
+                    </div>
+                </section>
+                <section id="snacks">
+                    <h2>Snack</h2>
+                    <div class="item-box" onclick="selectItem(34)">
+                        <img src="Media/products/Cheesy Nachos.png" id="cheesyNachos">
+                        Cheesy Nachos
+                    </div>
+                </section>
+        </div>
+
+    </div>
+
+    <!--link external javascript-->
+    <script src="cartScript.js"></script>
+</body>
+</html>

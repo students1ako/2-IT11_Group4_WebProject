@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Old Coast</title>
+    <link rel="icon" type="image/png" href="Media/OldCoastLogo.png">
+    <link rel = "stylesheet" href = "stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <a href="HomePage.html" id="navLogo">
+            <img src="Media/OldCoastLogo.png" alt="Old Coast Logo">
+        </a>
+        <div class="nav-links">
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="Home"></span>
+                <span class="Menu"></span>
+                <span class="Coffee Carts"></span>
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="HomePage.html"><b>Home</b></a>
+                <a href="Menu.html"><b>Menu</b></a>
+                <a href="Services.html"><b>Coffee Carts</b></a>
+                <a href="https://maps.app.goo.gl/iVLDW5noDbP72YoB6">
+                    <img src="Media/LocationIcon.png" alt="Location Icon">
+                    <b id="store">Find a Store</b>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Introduction Section -->
+    <header id="coffeeConnect">
+        <div class="container">
+            <div class="coffeeConnectText">
+                <h1>Let <em id="orderButton">Coffee</em>,<br>Connect us.</h1>
+                <p>
+                    At Old Coast Cafe, we bring people together and create special memories over a shared love of coffee. 
+                    Our warm and friendly atmosphere shows that we're more than just a place to get a drink. 
+                    It's a place where people can meet, connect, and enjoy each other's company.
+                </p>
+               
+                    <button type="button" value="OrderNow" onclick=orderButton()>Order Now!</button>
+               
+            </div>
+            <div id="ocCupPic">
+                <img src="Media/oldcoastpic.png" alt="Old Coast Cup" class="animated-image">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Loyalty Card Section -->
+        <section class="LoyaltyCardsContainer">
+            <div class="loyaltyContent">
+                <img src="Media/greenBGD.png" alt="Green Background" class="greenbgd">
+                <img src="Media/OCloyaltyCard.jpg" alt="Loyalty Cards" class="loyalcard">
+                <h1 class="lctext1">Loyalty Cards!</h1>
+                <p class="lctext2">
+                    At Old Coast Cafe, we love rewarding our loyal customers with our exclusive Loyalty Card! Earn stamps with 
+                    each visit and unlock exciting rewards—our way of saying thank you for your continued support. 
+                    Loyalty has its perks!
+                </p>
+            </div>
+        </section>
+
+        <!-- Promos Section -->
+        <section class="PromosSection">
+            <h1>Our Promos</h1>
+            <div class="PromosContainer">
+                <div class="promoItem" onclick="openModal('Media/Teacher_sDayPromo.jpg')">
+                    <img src="Media/Teacher_sDayPromo.jpg" alt="Teacher's Day Promo" class="promo-image">
+                </div>
+                <div class="promoItem" onclick="openModal('Media/ICoffeeDayPromo.jpg')">                    
+                    <img src="Media/ICoffeeDayPromo.jpg" alt="I Coffee Day Promo" class="promo-image">
+                </div>
+                <div class="promoItem" onclick="openModal('Media/MDPromo.jpg')">
+                    <img src="Media/MDPromo.jpg" alt="Mother's Day Promo" class="promo-image">
+                </div>
+            </div>   
+        </section>
+
+<!-- Best Sellers Section -->
+<section class="bestSellersSection">
+    <div class="navBar2">
+        <h1>Best Sellers</h1>
+        <div class="arrowButtons">
+            <button class="arrowleft" onclick="moveCarousel(-1)">&#9664;</button> <!-- Left Arrow -->
+            <button class="arrowright" onclick="moveCarousel(1)">&#9654;</button> <!-- Right Arrow -->
+        </div>
+    </div>   
+
+    <div class="BestSellerContainer">
+        <div class="itemContainer" id="itemContainer">
+            <div class="Item">
+                <figure>
+                    <img src="Media/bestSellers/BL.webp" alt="Coffee - BL">
+                    <figcaption>Biscoff Latte</figcaption>
+                </figure>
+            </div>
+            <div class="Item">
+                <figure>
+                    <img src="Media/bestSellers/GA.webp" alt="Coffee - GA">
+                    <figcaption>Green Apple</figcaption>
+                </figure>
+            </div>
+            <div class="Item">
+                <figure>
+                    <img src="Media/bestSellers/Matcha.webp" alt="Coffee - Matcha">
+                    <figcaption>Matcha</figcaption>
+                </figure>
+            </div>
+            <div class="Item">
+                <figure>
+                    <img src="Media/bestSellers/NutAl.webp" alt="Coffee - Nut Almond">
+                    <figcaption>Nutella Almond</figcaption>
+                </figure>
+            </div>
+            <div class="Item">
+                <figure>
+                    <img src="Media/bestSellers/NutEspresso.webp" alt="Coffee - Nut Espresso">
+                    <figcaption>Nutella Espresso</figcaption>
+                </figure>
+            </div>
+            <div class="Item">
+                <figure>
+                    <img src="Media/bestSellers/OCSignature.webp" alt="Coffee - OC Signature">
+                    <figcaption>Old Coast Signature</figcaption>
+                </figure>
+            </div>
+            <div class="Item">
+                <figure>
+                    <img src="Media/bestSellers/SC.webp" alt="Coffee - SC">
+                    <figcaption>Strawberry Cream</figcaption>
+                </figure>
+            </div>
+        </div>    
+    </div>
+</section>
+    </main>
+
+    <!--footer section-->
+    <hr>
+    <footer class="footerSection">
+        
+        <div>
+            <div class="footer-links">
+                <h2>Company</h2>
+                <a href="About.html">
+                    <b>About us</b>
+                </a>
+                
+                <a href="Contacts.html">
+                    <b>Contact us</b>
+                </a>
+                
+                <a href="CreatorProfile.html">
+                    <b>Creators</b>
+                </a>
+            </div>
+            
+            <div class="footer-socials">
+                <h2>Let's Connect</h2>
+                <a href="https://www.facebook.com/oldcoast.cafe"><img src="Media/Icons/facebookLogo.png"></a>
+                <a href="https://www.instagram.com/oldcoast.cafe"><img src="Media/Icons/instagramIcon.png"></a>
+                <a href="https://www.tiktok.com/@oldcoastcafe"><img src="Media/Icons/TiktokIcon.png"></a>
+            </div>
+        </div>            
+    </footer>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="cartScript.js"></script>
+<script>
+        //carousel buttons
+let currentIndex = 0;
+
+function moveCarousel(direction) {
+    const itemContainer = document.getElementById('itemContainer');
+    const items = document.querySelectorAll('.Item');
+    const totalItems = items.length;
+
+    // Update current index based on direction
+    currentIndex += direction;
+
+    // Loop around if we go out of bounds
+    if (currentIndex < 0) {
+        currentIndex = totalItems - 1; // Go to last item
+    } else if (currentIndex >= totalItems) {
+        currentIndex = 0; // Go to first item
+    }
+
+    // Calculate the offset for the carousel
+    const offset = -currentIndex * (items[0].clientWidth + 2); // 20 is the margin
+    itemContainer.style.transform = `translateX(${offset}px)`;
+}
+
+    // Get the modal
+    function openModal(imageSrc) {
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        modal.style.display = "block"; // Show the modal
+        modalImage.src = imageSrc; // Set the image source for the modal
+        caption.innerHTML = "Image Description"; // Set the caption for the image
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none"; // Hide the modal
+    }
+
+    function orderButton() {
+       window.location.href='Menu.html';
+    }
+
+</script>
+
+</body>
+</html>

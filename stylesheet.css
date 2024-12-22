@@ -1,0 +1,732 @@
+body, html {
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Navigation Bar Styling */
+nav {
+    background-color: rgb(26, 83, 25);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0; /* Aligns it to the top of the viewport */
+    left: 0; /* Ensures it spans the full width */
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+    line-height: 50px;
+}
+
+.nav-links img {
+    vertical-align: middle;
+    width: 20px;
+}
+
+#navLogo img {
+    padding-left: 10px;
+    width: 40px;
+    height: auto;
+}
+
+
+/* Main Content Section */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 0 50px;
+}
+
+.coffeeConnectText {
+    max-width: 500px;
+}
+
+#coffeeConnect h1{
+    font-family: 'Abril Fatface', serif;
+    font-size: 3em;
+    color: rgb(59, 121, 48);
+    letter-spacing: 2px;
+    text-shadow: -4px 1px 7px rgba(87, 85, 85, 0.157);
+}
+
+#coffeeConnect p{
+    font-size: 16px;
+    max-width: 600px;
+}
+.coffeeConnectText button{
+    border-radius: 7px;
+    padding: 7px;
+    background-color: rgb(59, 121, 48);
+    color: white;
+    border: 0;
+    cursor: pointer;
+    
+}
+.coffeeConnectText button:hover{
+    transform:translateZ(10px) scale(1.05);
+    box-shadow:  0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+#ocCupPic img{
+    max-width: 100%;
+    height: auto;
+    padding: 0 0 0 30px;
+    animation: panInOut 3s infinite;/* Apply animations */
+}
+
+@keyframes panInOut {
+    0% {
+        transform: scale(1) translateX(0); /* Original position */
+    }
+    50% {
+        transform: scale(1.05) translateX(5px); /* Slightly zoom in and pan right */
+    }
+    100% {
+        transform: scale(1) translateX(0); /* Return to original position */
+    }
+}
+
+
+
+/* Loyalty Card Section */
+.LoyaltyCardsContainer {
+    position: relative;
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.loyaltyContent {
+    position: relative;
+    display: flex;
+}
+
+.greenbgd {
+    z-index: 1;
+    margin: 5% auto;
+    width: 100%;
+    height: auto;
+}
+
+.loyalcard {
+    position: absolute;
+    z-index: 2;
+    margin: 2% 5%;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.365);
+}
+
+.lctext1 {
+    position: absolute;
+    z-index: 3;
+    padding: 5% 60%;
+    width: 40%;
+    color: white;
+    font-size: 40px;
+}
+
+.lctext2 {
+    position: absolute;
+    z-index: 3;
+    padding: 15% 60%;
+    width: 30%;
+    color: white;
+    font-size: 16px;
+}
+
+/* Promos Section */
+.PromosSection {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.PromosSection h1 {
+    font-family: 'Merriweather';
+    font-style:  bold;
+    color: rgb(59, 121, 48);
+    font-size: 35px;
+    letter-spacing: 1x;
+    margin-bottom: 20px; /* Spacing between title and container */
+}
+
+.PromosContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.promoItem {
+    flex: 1;
+    margin: 0 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Initial box shadow */
+    padding: 5px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform-style: preserve-3d; /* Preserve 3D transformations */
+    cursor: pointer;
+}
+
+.promoItem:hover {
+    transform: translateY(-10px) translateZ(10px) scale(1.05); /* Lift forward and scale */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced box shadow on hover */
+}
+
+.PromosContainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/*modal styling*/
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: 10% auto;
+    display: block;
+    width: 80%; /* Width of the modal image */
+    max-width: 700px; /* Max width of the modal image */    
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Best Sellers Section */
+.bestSellersSection {
+    align-items: center;
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 0 50px;
+    text-align: left;
+    position: relative;
+    text-align: center;
+}
+
+/* Styling for the header and navigation bar */
+.navBar2 {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 0;
+    height: 100px;
+}
+
+/*Best Sellers Section*/
+.bestSellersSection {
+    align-items: center;
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.navBar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.bestSellersSection h1 {
+    font-family: 'Merriweather';
+    font-weight: bold;
+    color: rgb(59, 121, 48);
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+.arrowButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.arrowleft, .arrowright {
+    background-color: rgb(229, 250, 210);
+    border-color: rgb(113, 233, 0);
+    border-radius: 100px; 
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(59, 121, 48);
+    padding: 5px 10px;
+}
+
+.BestSellerContainer {
+    overflow: hidden; /* Hide overflow for carousel effect */
+    position: relative; /* Position relative for absolute children */
+}
+
+.itemContainer {
+    overflow: visible;
+    display: flex; /* Flexbox for horizontal layout */
+    transition: transform 0.3s ease; /* Smooth transition for carousel */
+    padding: 30px;
+}
+
+.Item {
+    text-align: center;
+    cursor: pointer; /* Change cursor to pointer */
+    min-width: 200px; /* Set a minimum width for items */
+    margin: 0 10px; /* Add margin between items */
+    font-size: large;
+}
+
+.Item img {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;                  /* Fills the container width */
+    height: auto;                 /* Maintains aspect ratio */
+    display: block;               /* Removes extra space below images*/
+    border-radius: 40px;
+}
+.Item img:hover{
+    transform: translateY(-10px) translateZ(10px) scale(1.05); /* Lift forward and scale */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced box shadow on hover */
+}
+
+.Item figure {
+    margin: 0 10px 5px;
+    text-align: center;
+    color: rgb(59, 121, 48);    
+}
+
+
+/*Footer Styling*/
+.footerSection {
+    display:flex;  
+    position: 0 0 60%;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    }
+
+/* For the footer links section */
+.footer-links {
+    margin: 0 10px;
+    display: block;
+}
+
+/* For the footer social media section */
+.footer-socials {
+    margin: 0 ;
+   
+}
+
+/* Styling for the links in footer */
+.footer-links a {
+    display: block;
+    line-height: 30px;
+
+    color: rgb(83, 94, 85);
+    text-decoration: none;
+}
+
+.footer-socials{
+    margin: 0 10px 30px;
+    display: block;
+
+}
+
+.footer-socials img{
+    max-width: 30px;
+    margin: 0 auto;
+}
+
+
+
+/*Contacts us page Styling*/
+.contactSection{
+    color: rgb(59, 121, 48);
+
+}
+
+.contactSection h2{
+    text-align: center;
+}
+
+.contactInfo{
+    padding: 5px 10%;   
+}
+
+.contactInfo h4{
+    margin-bottom: -10px;
+}
+
+.contactInfo p{
+    line-height: 20px;
+    margin-bottom: 5%;
+}
+
+
+/*about us styling*/
+/* Container styling for headings */
+.AboutUscontainer {
+    color: rgb(26, 83, 25);
+    align-items: center;
+    max-width: 1000px;
+    margin: 100px auto 50px;
+    text-align: center;
+    text-justify: auto;    
+}
+
+#ourValues{
+    margin-top: 10%;
+}
+
+/* Styling for paragraphs */
+.centered-paragraph {
+    margin: 1% 20%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Styling for centered images */
+.centered-image {
+    margin-bottom: 2%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* General styling for headings */
+.Header {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Container for the entire team section */
+.team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Flexbox container for team members */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto 10%;
+}
+
+/* Each team member card */
+.team-member {
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Team member photo styling */
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+/* Social icon styling */
+.facebook-logo {
+    max-width: 24px;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* Event Section */
+.EventSection {
+    align-items: center;
+    text-align: center;
+    margin: 100px auto;
+    max-width: 1000px;
+    
+}
+
+.EventSection h1 {
+    font-family: 'Bold', sans-serif ;
+    font-style:  bold;
+    color: rgb(37, 85, 31);
+    font-size: 60px;  /* Font size set to 40.7px */
+    letter-spacing: 1x;
+    margin-bottom: 20px; /* Spacing between title and container */
+}
+
+.EventContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header-text {
+    font-family: 'Archivo Black', sans-serif; /* Use Archivo Black font */
+    font-size: 40.7px; /* Font size for header */
+    line-height: 1.2; /* Line height for spacing */
+    color: #246b30; /* Header text color */
+    margin: 0; /* Remove default margin */
+}
+.header-text {
+    font-size: 2rem; /* Increases the header text size */
+    font-weight: bold; /* Adds spacing below the header */
+}
+
+.EventSection p {
+    text-align: center;
+    font-family: Arial, sans-serif; /* Optional: Sets the font */
+    font-size: 20px; /* Optional: Sets the font size */
+    color: #246b30; 
+    width: 80%; 
+    line-height: 1.6;
+    margin: auto;
+}
+
+.EventSection h2 {
+    text-align: left; /* Aligns the text to the left */
+    font-size: 24px; /* Sets the font size */
+    font-family: Arial, sans-serif; /* Specifies the font */
+    margin: 30px 30px 10px;
+    
+}
+
+.wrapper{
+    align-items: center;
+    max-width: fit-content;   
+}
+
+.wrapper i{
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 45px;
+    background: rgb(117, 119, 117);
+    border-radius: 50%;
+
+}
+.carousel{
+    font-size: 0 ;
+    cursor: pointer;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 20px;
+}
+.carousel img{
+    height: 300px;
+    object-fit: cover;
+    margin-left: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  
+    transition: transform 0.3s, box-shadow 0.3s;   
+}
+.carousel img:hover{
+    transform: translateY(-10px) translateZ(10px) scale(1.05); /* Lift forward and scale */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced box shadow on hover */
+}
+
+.carousel img :first-child{
+    margin-left: 0; 
+}
+
+
+/*Services Styling*/
+.ServiceSection{
+    position: relative;
+    margin: auto;
+    margin-bottom: 50px;
+    align-items: center;
+    display: flex;
+    max-width: 1000px;
+}
+
+.ServiceSection table{
+    display: flexbox;
+    margin: auto;
+    align-items: center;
+    padding: 10px;
+    width: 95%;
+}
+
+.ServiceSection thead{
+    background-color:#246b30;
+    color: white;
+}
+.ServiceSection th{
+    padding: 10px;
+
+}
+
+.ServiceSection td{
+    align-items: center;
+    padding: 20px 50px 20px 90px;
+    color: #246b30;
+}
+
+.ServiceSection button{
+    display: flex;
+    border-radius: 7px;
+    padding: 7px;
+    background-color: rgb(59, 121, 48);
+    color: white;
+    margin: auto;
+    border: 0;
+    cursor: pointer;    
+}
+
+
+
+
+
+/*animation styling for old coast cup pic*/
+
+
+/* Mobile responsive styling */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    #coffeeConnect {
+        padding-left: 0;
+        text-align: center; /* Center-align text for mobile */
+    }
+
+    #coffeeConnect h1, #coffeeConnect p {
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+    #ocCupPic img {
+        margin: 0; /* Reset margin */
+        padding: 20px 0; /* Add padding around image */
+        max-width: 90%; /* Adjust max width for mobile */
+    }
+
+    /* Hamburger Menu Styles */
+    .hamburger {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin: 30px;
+    }
+
+    .hamburger span {
+        height: 4px;
+        width: 100%;
+        background-color: #ffffff; /* Change color as needed */
+        border-radius: 25px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;    
+    }
+
+    .hamburger span:nth-child(1) {
+        top: 25%;
+    }
+
+    .hamburger span:nth-child(3) {
+        top: 25%;
+    }
+
+    .hamburger.active span:nth-child(3){
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .hamburger.active span:nth-child(2){
+    opacity: 0%;
+    }
+
+    .hamburger.active span:nth-child(1){
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+
+    /* Dropdown Menu Styles */
+    .dropdown-menu {
+        display: none; /* Hidden by default */
+        position: absolute; /* Position it below the hamburger icon */
+        background-color:#246b30; /* Background color */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+        z-index: 1000; /* Ensure it appears above other content */
+        margin: 10px auto;
+        top: 5px;
+        right: 0;
+    }
+
+    .dropdown-menu a {
+        display: block; /* Make links block elements */
+        padding: 5px 10px; /* Add padding */
+        text-decoration: none; /* Remove underline */
+        color: white; /* Text color */
+    }   
+
+    .dropdown-menu a:hover {
+        background-color: rgba(34, 166, 34, 0.856); /* Change background on hover */
+    }
+
+    .dropdown-menu.active {
+        display: block; /* Show the dropdown when active */
+    }
+
+    .dropdown-menu b{
+        line-height: 1px;
+    }
+
+}
+

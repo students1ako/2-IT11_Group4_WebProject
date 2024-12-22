@@ -1,0 +1,529 @@
+.ItemBody{
+    overflow-x: hidden;
+}
+
+.MenuContainer{
+    max-width: 100%;
+}
+.menuItemContainer{
+    margin: 100px 2% 0 20%;
+}
+
+/* Navigation Bar Styling */
+nav {
+    position: fixed;
+    z-index: 3;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #4a7212;
+    padding: 1%;
+    min-width: 150px;
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    font-size: large;
+}
+
+.sidebarContainerText{
+    color: white;
+    letter-spacing: 2px;
+    line-height: 25px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #295a218e ;
+    margin: -5% auto;
+}
+
+.sidebar h3{
+    margin: 5px;
+    padding: 10px 20px 0;
+    margin-bottom: 0;
+}
+
+.sidebar hr{
+    align-self: center;
+    width: 90%;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0 20px;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+#coffee::after{
+    margin-top: 200px;
+}
+
+
+/* Content Styling */
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    margin-top: 0;
+    color: rgb(26, 83, 25);
+}
+
+/* Item Box Styling */
+.item-box {
+    display: inline-block;
+    width: 125px;
+    height: 150px;
+    margin: 10px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 15px 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+    /*text layouting/styling*/
+    text-align: center;
+    vertical-align:bottom;
+    line-height: 1%;
+    font-size: small;
+    font-weight: bold;
+    color: rgb(26, 83, 25);
+    cursor: pointer;
+}
+.item-box img {
+    width: 100%; 
+    height: 100%; 
+    max-height: 80%; 
+    border-radius: 15px 0;
+    margin-bottom: 10px; 
+}
+
+#Cartbutton {
+    position: fixed;
+    right: 30px;
+    bottom: 25px;
+    max-width: 50px;
+    cursor: pointer;
+}
+
+/* Item Description styling */
+.ItemDescriptionSection {    
+    position: relative;
+    align-items: center;
+    margin: 100px 0 0 17%;
+    width: 90%;
+    height: auto;
+}
+
+.ItemContent {
+    display: flex;
+    background-color: rgb(59, 121, 48);
+    height: 200px;
+    max-width: 92%;
+    padding-right: 10px;
+    right: 10px;
+    border-radius: 30px; 
+}
+
+.Item {
+    margin: -25px 25px;
+    width: 250px;
+    height: 250px;
+    border: solid #155c11;
+    border-radius: 10px;
+}
+
+.ItemContent h1{
+    margin-top: 20%;
+    color: white;
+    font-size: 20px;
+}
+
+.ItemContent p {
+    margin: 10px 0 0; 
+    color: white;
+    font-size: 16px;
+}
+
+/* Style the labels to act as clickable buttons */
+.temp input[type="radio"] {
+    display: none;
+}
+
+#aOptionsSection{
+    position: flex;
+    flex-direction: column;
+}
+
+.tempContainer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin: 10px 17%;
+    padding-left: 300px;
+    width: 100%;
+    font-size: 20px;
+    gap: 5%;   
+}
+
+.tempContainer input[type="radio"] {
+    appearance: none; 
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #035800;
+    border-radius: 0px; 
+    background-color:rgb(204, 245, 166);
+    cursor: pointer;
+}
+
+/* Style for checked state */
+.tempContainer input[type="radio"]:checked {
+    background-color: rgb(99, 121, 95);
+    border-color: rgb(59, 121, 48);
+    box-shadow: 0 0 5px rgba(59, 121, 48, 0.6); 
+}
+
+.QuantContainer {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.itemQuant input[type="number"] {
+    text-align: center;
+    width: 20px;
+    font-size: 15px;
+    border: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    height: 30px; 
+    line-height: 30px;
+    display: inline-block; 
+    outline: none; 
+}
+
+.itemQuant input[type="number"]::-webkit-outer-spin-button,
+.itemQuant input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.itemQuant button{
+    border: 0;
+    background-color:transparent;
+    font-size: large;    
+    cursor: pointer;
+}    
+
+
+/*Addons and Extras Styling*/
+#customizeItem{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    margin: 20px 0 0 20%;
+    max-width: 60em;
+    color: #2e2e2e;
+}
+
+/*Add ons*/
+.addons{
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    width: 400px;
+}
+
+.addons h3{
+    margin: 0;
+}
+
+.dropdowns{
+    margin: 10px 0;
+    max-width: 100%;
+    padding: 0;
+    display: block;
+}
+
+.dropdowns fieldset{
+    margin: 0;
+    height: 30px;
+    width: 100%;
+    border-radius: 8px;
+    border-color: #295A21;
+    border-width: 1px;
+    margin-bottom: 10px;
+}
+
+.dropdowns select{
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+}
+
+/*Extras*/
+.extras{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 60%;
+}
+
+#extras h3{
+    margin-bottom: 5px;
+}
+
+#extras table{
+    width: 100%; 
+}
+
+#extras th{
+    text-align: center;
+}
+
+#extras tbody td{
+    font-weight: bold;
+}
+
+.itemColumn{
+    width: 250px;
+}
+
+.itemQuant,.priceColumn {
+    text-align: center;
+    padding-right: 20px;
+ 
+}
+
+.cartButton{
+    position: fixed;
+    right: 100px;
+    bottom: 30px;
+    align-items: center;
+}
+
+.cartButton button{
+    padding: 9px;
+    width: 110px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3b7930;
+    color: white;
+    font-size: medium;
+    cursor: pointer;   
+}
+
+
+
+/*cart/basket page styling */
+.sidebarContainerTextOrderSum{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    background-color: #295a218e ;
+    height: 89%;
+}
+
+.sidebarContainerTextOrderSum button{
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    background-color: #295a21;
+    border: none;
+    color: white;      
+    cursor: pointer;
+}
+
+.sidebarContainerTextOrderSum h3{ /*Order Summary and Payment Method*/
+    font-size:large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin-top: 1px;
+    padding-left: 10px;
+}
+
+.sidebarContainerTextOrderSum hr{
+    height: 3px;
+    background-color: #a5a5a5;
+    border: none;
+    margin: 5px 7px;
+}
+
+.sidebarContainerTextOrderSum table{
+    margin-top: 1px;
+    padding: 5px;
+    font-size: small;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    text-indent: 5px;
+    width: 100%;
+}
+
+.sidebarContainerTextOrderSum td.intValueSum{ /*to align right the total values*/
+    text-align: right;
+}
+
+.sidebarContainerTextOrderSum div.paymentMethods input{
+    align-self: right;
+    width: 9px;
+}
+
+.sidebarContainerTextOrderSum label{
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin: 5px 5px;   
+    padding-left: 5px;
+}
+
+.sidebarContainerTextOrderSum .confirmOrderButton button{
+    position: relative;   
+    margin-top: 45%;
+
+}
+
+.selectedItem {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.itemContainer {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 150px; /* Adjust width as needed */
+    text-align: center;
+}
+
+.itemImage {
+    width: 100%;
+    height: auto;
+}
+
+.editOrderButton {
+    margin-top: 10px;
+}
+
+
+.totalItemPrice{
+    position: fixed;
+    right: 240px;
+    bottom: 25px;
+    align-items: center;
+    color: #035800;
+    text-align: right;
+}
+
+
+/*item containers in cart page styling */
+.selectedItemListContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 150px;
+    left: 10%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+.selectedItemListContainer h1{
+    margin-bottom: 0;
+}
+
+.selectedItemListContainer hr{
+    margin-top: 0;
+    width: 200px;
+    height: 3px;
+    border-style: none;
+    background-color: #a5a5a5;
+}
+
+#selectedItemList {
+    display: flex; /*replace with none when not in cart page*/
+    margin: 50px auto;    
+    width: 70%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.itemContainer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.2);
+}
+
+.selectedItemInfo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+
+.selectedItemInfo .text{
+    text-align: left;
+    color:#295A21;
+}
+.text button{
+    background-color: transparent;
+    border: none;
+    color: #035800;
+    padding: 0;
+    font-size: 15px;
+    width: auto;
+
+}
+
+#selectedItemList .price{
+    text-align: right;
+    color:#295A21;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.price p{
+    margin: 5px 20px 10px 0;
+
+}
+
+.image{
+    width: 120px;
+    height: 120px;
+    border-radius: 10%;
+    margin-bottom: 5px;
+    border: 1px solid #035800;
+}
+

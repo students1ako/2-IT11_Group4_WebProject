@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Old Coast</title>
+    <link rel="icon" type="image/png" href="Media/OldCoastLogo.png">
+    <link rel = "stylesheet" href = "stylesheet.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<body link="white" vlink="white">
+    <!-- Navigation bar -->
+    <nav>
+        <a href="HomePage.html" id="navLogo">
+            <img src="Media/OldCoastLogo.png" alt="Old Coast Logo">
+        </a>
+        <div class="nav-links">
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="Home"></span>
+                <span class="Menu"></span>
+                <span class="Coffee Carts"></span>
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="HomePage.html"><b>Home</b></a>
+                <a href="Menu.html"><b>Menu</b></a>
+                <a href="Services.html"><b>Coffee Carts</b></a>
+                <a href="https://maps.app.goo.gl/iVLDW5noDbP72YoB6">
+                    <img src="Media/LocationIcon.png" alt="Location Icon">
+                    <b id="store">Find a Store</b>
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+
+        <!-- Event Section-->
+    <section class="EventSection">
+        <h1 class="header-text">DELIGHT IN<br>EVERY EVENT</h1>
+        <p>Enhance your event with our inviting coffee cart, perfect for weddings, birthdays, anniversaries,
+        private parties, and corporate events, ensuring a delightful coffee experience for your guests.</p>
+        
+        
+        <div class="EventsContainer">
+            <h2 class="header-text">Featured Coffee Cart Moment</h2>
+            <div class="wrapper">
+                <div class="carousel">
+                    <img src="Media/CoffeeCartMoments/Image 1.jpg" alt="img" onclick="openModal('Media/CoffeeCartMoments/Image 1.jpg')">
+                    <img src="Media/CoffeeCartMoments/Image 2.jpg" alt="img" onclick="openModal('Media/CoffeeCartMoments/Image 2.jpg')">
+                    <img src="Media/CoffeeCartMoments/Image 3.jpg" alt="img" onclick="openModal('Media/CoffeeCartMoments/Image 3.jpg')">
+                    <img src="Media/CoffeeCartMoments/Image 4.jpg" alt="img" onclick="openModal('Media/CoffeeCartMoments/Image 4.jpg')">
+                    <img src="Media/CoffeeCartMoments/Image 5.jpg" alt="img" onclick="openModal('Media/CoffeeCartMoments/Image 5.jpg')">
+                </div>
+            </div>    
+        </div>
+
+    </section>
+
+    <section class="ServiceSection">
+        <table>
+            <tbody>
+            <thead>
+                <tr>
+                    <th>Regular Package</th>
+                    <th>Premium Package</th>
+                </tr>
+            </thead>
+            
+                <tr>
+                    <td>
+                        Complete mobile cafe setup<br>
+                        &nbsp&nbsp • Coffee Cart<br>
+                        &nbsp&nbsp • Espresso machine<br>
+                        &nbsp&nbsp • Coffee grinder<br>
+                        <br>
+                        Covers up to 50, 75, or 100 cups<br>
+                        <br>
+                        3 hours of Service<br>
+                        <br>
+                        3 drinks option of your choice (hot or iced)<br>
+                        <br>
+                        Popular Choices:<br>
+                        &nbsp&nbsp • Spanish Latter<br>
+                        &nbsp&nbsp • Lychee Fruit Soda<br>
+                        &nbsp&nbsp • Strawberry Milk
+                        <br><br>
+
+                        <button type="button" value="Learn More" onclick=LearnMore()>Learn More</button>
+               
+                    </td>
+
+                    <td>
+                        Complete mobile cafe setup<br>
+                        &nbsp&nbsp • Coffee Cart<br>
+                        &nbsp&nbsp • Espresso machine<br>
+                        &nbsp&nbsp • Coffee grinder<br>
+                        <br>
+                        Covers up to 50, 75, or 100 cups<br>
+                        <br>
+                        4 hours of Service<br>
+                        <br>
+                        4 drinks option of your choice (hot or iced)<br>
+                        <br>
+                        Exclusive Options:<br>
+                        &nbsp&nbsp • Old Coast Signature<br>
+                        &nbsp&nbsp • Biscoff Latte<br>
+                        &nbsp&nbsp • Green Apple Soda
+                        <br><br>
+                        <button type="button" value="Learn More" onclick=LearnMore()>Learn More</button>
+               
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <!--footer section-->
+    <hr>
+    <footer class="footerSection">
+        
+        <div>
+            <div class="footer-links">
+                <h2>Company</h2>
+                <a href="About.html">
+                    <b>About us</b>
+                </a>
+                
+                <a href="Contacts.html">
+                    <b>Contact us</b>
+                </a>
+                
+                <a href="CreatorProfile.html">
+                    <b>Creators</b>
+                </a>
+            </div>
+            
+            <div class="footer-socials">
+                <h2>Let's Connect</h2>
+                <a href="https://www.facebook.com/oldcoast.cafe"><img src="Media/Icons/facebookLogo.png"></a>
+                <a href="https://www.instagram.com/oldcoast.cafe"><img src="Media/Icons/instagramIcon.png"></a>
+                <a href="https://www.tiktok.com/@oldcoastcafe"><img src="Media/Icons/TiktokIcon.png"></a>
+            </div>
+        </div>    
+    </footer>
+
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+    function openModal(imageSrc) {
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        modal.style.display = "block"; // Show the modal
+        modalImage.src = imageSrc; // Set the image source for the modal
+        caption.innerHTML = "Image Description"; // Set the caption for the image
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none"; // Hide the modal
+    }
+
+    function LearnMore(){
+        window.location.href='https://www.facebook.com/oldcoast.cafe';
+    }
+    </script>
+
+
+</body>
+</html>

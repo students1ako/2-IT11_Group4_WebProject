@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Coast</title>
+    <link rel="icon" type="image/png" href="Media/OldCoastLogo.png">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="MenuStylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+
+<!-- Navigation Bar -->
+<nav>
+    <a href="HomePage.html" id="navLogo">
+        <img src="Media/OldCoastLogo.png" alt="Old Coast Logo">
+    </a>
+    <div class="nav-links">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="Home"></span>
+            <span class="Menu"></span>
+            <span class="Coffee Carts"></span>
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="HomePage.html"><b>Home</b></a>
+            <a href="Menu.html"><b>Menu</b></a>
+            <a href="Services.html"><b>Coffee Carts</b></a>
+            <a href="https://maps.app.goo.gl/iVLDW5noDbP72YoB6">
+                <img src="Media/LocationIcon.png" alt="Location Icon">
+                <b id="store">Find a Store</b>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<body link="white" vlink="white" class="ItemBody">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebarContainerText">
+            <h3>Drinks</h3>
+            <hr>
+            <ul>
+                <li><a href="Menu.html#coffee">Espresso</a></li>
+                <li><a href="Menu.html#non-coffee">Non-Coffee</a></li>
+                <li><a href="Menu.html#fruitSoda">Fruit Sodas</a></li>
+            </ul>
+            <br>
+            <h3>Food</h3>
+            <hr>
+            <ul>
+                <li><a href="Menu.html#pasta">Pasta</a></li>
+                <li><a href="Menu.html#pastries">Pastries</a></li>
+                <li><a href="Menu.html#sandwiches">Sandwiches</a></li>
+                <li><a href="Menu.html#snacks">Snacks</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Item Description -->
+    <div class="ItemDescriptionSection">
+        <div id="itemDetails" class="ItemContent">
+            <img id="itemImage" src="" alt="Item Image" class="Item">
+            <div>
+                <h1 id="itemName"></h1>
+                <p id="itemDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Temperature Selection -->
+    <section id="aOptionsSection" class="customizationSection">
+        <div class="tempContainer">
+            <label>
+                <input type="radio" name="temp" value="Iced" checked onchange="updatePrice()"> Iced
+            </label>
+            <label>
+                <input type="radio" name="temp" value="Hot" onchange="updatePrice()"> Hot
+            </label>
+
+            <div class="QuantContainer">
+                <p> Item Quantity </p>
+                <div class="itemQuant">
+                    <button class="decrease" onclick="changeQuantity(-1)">-</button>
+                    <input type="number" id="itemQuantity" value="1" min="1" onchange="updatePrice()">
+                    <button class="increase" onclick="changeQuantity(1)">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Display -->
+    <div>
+        <p>Total Price: <span id="priceColumn">10.00</span></p>
+    </div>
+
+    <!-- Add-ons Section -->
+    <section id="customizeItem" class="customizationSection">
+        <div class="addons">
+            <h3>Add-Ons</h3>
+            <div class="dropdowns">
+                <fieldset>
+                    <legend>Sauces P35 each</legend>
+                    <select id="sauces" name="sauces" onchange="updatePrice()">
+                        <option value="none">None</option>
+                        <option value="white chocolate">White choco (40ml)</option>
+                        <option value="chocolate">Chocolate (30ml)</option>
+                        <option value="strawberry jam">Strawberry Jam (30ml)</option>
+                        <option value="matcha">Matcha (40ml)</option>
+                        <option value="caramel">Caramel (40ml)</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Syrup P25 each</legend>
+                    <select id="syrup" name="syrup" onchange="updatePrice()">
+                        <option value="none">None</option>
+                        <option value="french vanilla">French Vanilla (30ml)</option>
+                        <option value="vanilla">Vanilla (30ml)</option>
+                        <option value="hazelnut">Hazelnut (30ml)</option>
+                        <option value="strawberry">Strawberry (40ml)</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Milk P35 each</legend>
+                    <select id="milk" name="milk" onchange="updatePrice()">
+                        <option value="none">None</option>
+                        <option value="oat">Oat Milk (120ml)</option>
+                        <option value="almond">Almond Milk (120ml)</option>
+                        <option value="nonfat">Non Fat Milk (120ml)</option>
+                    </select>
+                </fieldset>
+            </div>
+        </div>
+
+        <!-- Extras Section -->
+        <div id="extras">
+            <h3>Extras</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="itemColumn" style="text-align: left;">Item</th>
+                        <th class="priceColumn">Price</th>
+                        <th class="quantityColumn" style="text-align: left;">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="itemColumn">Whipped Cream</td>
+                        <td class="priceColumn">35</td>
+                        <td class="itemQuant">
+                            <button class="decrease" onclick="changeExtraQuantity(this, -1)">-</button>
+                            <input type="number" value="0" min="0" onchange="updatePrice()">
+                            <button class="increase" onclick="changeExtraQuantity(this, 1)">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="itemColumn">Coffee Jelly</td>
+                        <td class="priceColumn">25</td>
+                        <td class="itemQuant">
+                            <button class="decrease" onclick="changeExtraQuantity(this, -1)">-</button>
+                            <input type="number" value="0" min="0" onchange="updatePrice()">
+                            <button class="increase" onclick="changeExtraQuantity(this, 1)">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="itemColumn">Nata</td>
+                        <td class="priceColumn">20</td>
+                        <td class="itemQuant">
+                            <button class="decrease" onclick="changeExtraQuantity(this, -1)">-</button>
+                            <input type="number" value="0" min="0" onchange="updatePrice()">
+                            <button class="increase" onclick="changeExtraQuantity(this, 1)">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="itemColumn">Espresso Shot</td>
+                        <td class="priceColumn">40</td>
+                        <td class="itemQuant">
+                            <button class="decrease" onclick="changeExtraQuantity(this, -1)">-</button>
+                            <input type="number" value="0" min="0" onchange="updatePrice()">
+                            <button class="increase" onclick="changeExtraQuantity(this, 1)">+</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="totalItemPrice">
+        <p>Total Price: <span id="totalPrice">0.00</span></p>
+    </div>
+
+    <!-- Button to add the selected item -->
+    <div class="cartButton">
+        <button type="button" value="selectedItem" onclick="orderNow()">Buy</button>
+    </div>
+
+
+    <!-- Link external JavaScript -->
+    <script src="cartScript.js"></script>
+
+</body>
+</html>
